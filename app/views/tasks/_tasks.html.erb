@@ -1,0 +1,15 @@
+<ul class="list-unstyled">
+  <% tasks.each do |task| %>
+    <li class="media mb-3">
+      <div class="media-body">
+        <div>
+          <a>ID: <%= task.user.name %></a> <span class="text-muted">posted at <%= task.created_at %></span>
+        </div>
+        <div>
+          <p><%= task.status %> : <%= task.content %></p>
+        </div>
+        <%= link_to 'edit', task_path(task) %>
+      </div>
+    </li>
+  <% end %>  
+</ul>
